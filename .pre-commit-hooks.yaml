@@ -4,3 +4,4 @@
   language: python
   files: \.(h\+\+|h|hh|hxx|hpp|cuh|c|cc|cpp|cu|c\+\+|cxx|tpp|txx)$
   entry: check-doxygen-warnings.py
+  require_serial: true

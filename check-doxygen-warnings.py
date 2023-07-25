@@ -30,7 +30,7 @@ def filter_doxygen_messages(filenames, messages):
     interesting_messages = [
         msg.strip()
         for msg in messages
-        if any((os.path.samefile(msg.partition(":")[0], f) for f in filenames))
+        if any((os.path.isfile(msg.partition(":")[0]) and os.path.samefile(msg.partition(":")[0], f) for f in filenames))
     ]
 
     # Filter some common false positives
